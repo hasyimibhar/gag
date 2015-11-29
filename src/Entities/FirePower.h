@@ -21,7 +21,7 @@ class FirePower : public Entity
          if (index == ID("rndr"))
             return 50;
          else
-            return (int)this;
+            return (uintptr_t)this;
       }
 
       void update();

@@ -40,7 +40,7 @@ class Entity
       virtual int
       getOrder(int index)
       {
-         return (int)this;
+         return (uintptr_t)this;
       }
 
       virtual Vec

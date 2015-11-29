@@ -32,7 +32,7 @@ class InfoPopup : public Entity
          if (index == ID("rndr"))
             return 20;
          else
-            return (int)this;
+            return (uintptr_t)this;
       }
 
       Entity*

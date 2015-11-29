@@ -31,8 +31,8 @@ inline
 Singleton<T>::Singleton()
 {
    assert(instance_ == 0 && "Trying to initialize an already initalized Singleton");
-   int offset = (int)(T*)1 - (int)(Singleton <T>*)(T*)1;
-   instance_ = (T*)((int)this + offset);
+   uintptr_t offset = (uintptr_t)(T*)1 - (uintptr_t)(Singleton <T>*)(T*)1;
+   instance_ = (T*)((uintptr_t)this + offset);
 }
 
 

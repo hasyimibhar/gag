@@ -24,7 +24,7 @@ class Bullet : public Entity
          if (index == ID("rndr"))
             return 40;
          else
-            return (int)this;
+            return (uintptr_t)this;
       }
 
       void update();

@@ -29,7 +29,7 @@ class Mushroom : public Entity
          if (index == ID("rndr"))
             return 40;
          else
-            return (int)this;
+            return (uintptr_t)this;
       }
 
       const char*
