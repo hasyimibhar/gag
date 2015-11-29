@@ -8,7 +8,7 @@ obj/PlayerSpawnPoint.o obj/Spike.o obj/Tile.o obj/Camera.o obj/CollisionManager.
 obj/GameContent.o obj/Level.o obj/LevelManager.o obj/LevelTimeManager.o obj/TextInput.o obj/World.o \
 obj/CreditsState.o obj/EditorState.o obj/GameState.o obj/MainMenuState.o
 
-main: $(OBJS) bin
+main: $(OBJS) bin levels
 	$(CC) -o bin/$(TARGET_NAME) $(CFLAGS) $(LFLAGS) src/main.cpp $(OBJS)
 
 Application.o: obj
@@ -94,6 +94,9 @@ GameState.o: obj
 
 MainMenuState.o: obj
 	$(CC) -c $(CLFAGS) -o obj/MainMenuState.o src/States/MainMenuState.cpp
+
+levels: bin
+	cp -r dist/* bin
 
 obj:
 	mkdir obj
