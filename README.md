@@ -20,3 +20,7 @@ Due to a bug, you need to `cd` into the `bin` directory and run the game from th
 % cd bin
 % ./gag
 ```
+
+## Screenshot
+
+![alt screenshot](images/screenshot.png)
